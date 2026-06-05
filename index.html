@@ -1,0 +1,164 @@
+<Html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="recipe.b.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">🍽️</span>
+            <span class="logo-text">Obaro Enoch</span>
+        </div>
+           <nav class="nav" id="nav">
+         <a href="#"  class="nav-link">Home</a>
+         <a href="#" class="nav-link">favourite</a>
+         <a href="#" class="nav-link">shopping list</a>
+           </nav>
+          <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </header>
+        <section class="hero">
+          <h1 class="hero-title">
+            Discover & save <span> Delicious Recipes</span>
+          </h1>
+          <p class="hero-subtitle">
+                  cook smarter. Eat better . Plan ur meals with ease
+          </p>
+        </section>
+        <main class="main">
+             <div class="controls">
+              <input type="text" id="searchinput" placeholder="search for recipes" class="search-input">
+              <select id="categoryFilter" class="category-select">
+                <option value="all">All</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="snack">Snack</option>
+                <option value="dessert">Dessert</option>
+              </select>
+              <button class="btn-add" id="openFormBtn">Add recipe</button>
+             </div>
+             <!--Javascript will inject recipe cards here-->
+             <div class="recipe-grid" id="modaloverlay"></div>
+
+             <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+ 
+        <button class="modal-close" id="modalClose">✕</button>
+        <h2 id="modalTitle">Add New Recipe</h2>
+ 
+        <div class="form-group">
+            <label>Recipe Name</label>
+            <input type="text" id="recipeName" placeholder="e.g. Jollof Rice">
+        </div>
+ 
+        <div class="form-group">
+            <label>Category</label>
+            <select id="recipeCategory">
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="snack">Snack</option>
+                <option value="dessert">Dessert</option>
+            </select>
+        </div>
+ 
+        <div class="form-group">
+            <label>Cuisine</label>
+            <input type="text" id="recipeCuisine" placeholder="e.g. Nigerian, Italian">
+        </div>
+ 
+        <div class="form-group">
+            <label>Ingredients (one per line)</label>
+            <textarea id="recipeIngredients" rows="5"
+                      placeholder="Rice&#10;Tomatoes&#10;Onions"></textarea>
+        </div>
+ 
+        <div class="form-group">
+            <label>Instructions</label>
+            <textarea id="recipeInstructions" rows="4"
+                      placeholder="Step by step..."></textarea>
+        </div>
+ 
+        <div class="form-group">
+            <label>Emoji (optional)</label>
+            <input type="text" id="recipeEmoji" placeholder="e.g. 🍚">
+        </div>
+ 
+        <button class="btn-submit" id="saveRecipeBtn">Save Recipe</button>
+    </div>
+</div>
+<div class="shopping-panel" id="shoppingPanel">
+    <h2>Shopping List</h2>
+    <div id="shoppingItems"></div>
+    <button class="btn-close-panel" id="closeShoppingPanel">Close</button>
+</div>
+
+    </main>
+                 <main class="recipe-grid" id="recipeGrid">
+        <article class="recipe-card" data-title="Spaghetti Carbonara">
+            <div class="recipe-image" style="background-color: #f8c291;"></div>
+            <div class="recipe-content">
+                <img src="img/spaghetti carbonara.jpg" div-link="recipe-image" alt="Spaghetti Carbonara">
+                <h3>Spaghetti Carbonara</h3>
+                <p>A classic Italian pasta dish with eggs, cheese, and pancetta.</p>
+                <button class="view-btn">View Recipe</button>
+            </div>
+        </article>
+
+        <article class="recipe-card" data-title="Chicken Stir-Fry">
+            <div class="recipe-image" style="background-color: #6a89cc;"></div>
+            <div class="recipe-content">
+                <img src="img/chicken stir fry.jpg" div-link="recipe-image" alt="Chicken Stir-Fry">
+                <h3>Chicken Stir-Fry</h3>
+                <p>Quick and healthy veggies with tender chicken strips.</p>
+                <button class="view-btn">View Recipe</button>
+            </div>
+        </article>
+
+        <article class="recipe-card" data-title="Berry Smoothie">
+            <div class="recipe-image" style="background-color: #b8e994;"></div>
+            <div class="recipe-content">
+                <img src="img/berry smoothie.jpg" div-link="recipe-image" alt="Berry Smoothie">
+                <h3>Berry Smoothie</h3>
+                <p>A refreshing blend of mixed berries and Greek yogurt.</p>
+                <button class="view-btn">View Recipe</button>
+            </div>
+        </article>
+        <article class="recipe-card" data-title="Berry Smoothie">
+            <div class="recipe-image" style="background-color: #b8e994;"></div>
+            <div class="recipe-content">
+                <img src="" div-link="recipe-image" alt="Berry Smoothie">
+                <h3>Berry Smoothie</h3>
+                <p>A refreshing blend of mixed berries and Greek yogurt.</p>
+                <button class="view-btn">View Recipe</button>
+            </div>
+        </article>
+        <article class="recipe-card" data-title="Berry Smoothie">
+            <div class="recipe-image" style="background-color: #b8e994;"></div>
+            <div class="recipe-content">
+                <h3>Berry Smoothie</h3>
+                <p>A refreshing blend of mixed berries and Greek yogurt.</p>
+                <button class="view-btn">View Recipe</button>
+            </div>
+        </article>
+        <article class="recipe-card" data-title="Berry Smoothie">
+            <div class="recipe-image" style="background-color: #b8e994;"></div>
+            <div class="recipe-content">
+                <h3>Berry Smoothie</h3>
+                <p>A refreshing blend of mixed berries and Greek yogurt.</p>
+                <button class="view-btn">View Recipe</button>
+            </div>
+        </article>
+    </main>
+             
+             
+             <script src="app.js"></script>
+
+</body>
+</html>
